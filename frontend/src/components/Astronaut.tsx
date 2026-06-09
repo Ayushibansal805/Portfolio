@@ -12,10 +12,10 @@ export default function Astronaut() {
       floatIntensity={1}
     >
       <primitive
-        object={scene}
-        scale={2}
-        position={[0, -1, 0]}
-      />
+  object={scene}
+  scale={1.6}
+  position={[0, -2, 0]}
+/>
     </Float>
   );
 }

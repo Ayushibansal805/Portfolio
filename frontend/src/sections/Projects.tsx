@@ -1,6 +1,11 @@
 import ProjectUniverse from "../components/ProjectUniverse";
-
+import ProjectCard from "../components/ProjectCard";
+import { projects } from "../data/projects";
+import { usePortfolio } from "../context/PortfolioContext";
 export default function Projects() {
+  const {
+  recruiterMode,
+} = usePortfolio();
   return (
     <section
       id="projects"
@@ -37,9 +42,31 @@ export default function Projects() {
 
       </div>
 
-      <div className="h-[700px]">
-        <ProjectUniverse />
-      </div>
+      {!recruiterMode && (
+  <div className="h-[700px]">
+    <ProjectUniverse />
+  </div>
+)}
+
+{recruiterMode && (
+  <div
+    className="
+    max-w-6xl
+    mx-auto
+    grid
+    md:grid-cols-3
+    gap-8
+    px-8
+    "
+  >
+    {projects.map((project) => (
+      <ProjectCard
+        key={project.title}
+        project={project}
+      />
+    ))}
+  </div>
+)}
 
     </section>
   );

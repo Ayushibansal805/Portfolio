@@ -35,8 +35,17 @@ function RotatingKnot() {
 export default function Hero3D() {
   return (
     <Canvas camera={{ position: [0, 0, 12] }}>
-      <ambientLight intensity={2} />
-      <pointLight position={[10, 10, 10]} />
+      <ambientLight intensity={5} />
+
+<directionalLight
+  position={[5, 5, 5]}
+  intensity={5}
+/>
+
+<pointLight
+  position={[0, 5, 5]}
+  intensity={10}
+/>
         <Astronaut />
       {/* <group position={[4, 0, 0]}>
   <RotatingKnot />

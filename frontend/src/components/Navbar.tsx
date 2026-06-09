@@ -1,3 +1,4 @@
+import RecruiterToggle from "./RecruiterToggle";
 export default function Navbar() {
   return (
     <nav
@@ -20,18 +21,21 @@ py-3
   className="
   flex
   items-center
-  gap-12
+  justify-between
+  gap-8
+  min-w-[700px]
   "
 >
         <h1 className="font-bold text-xl">
           AYUSHI
         </h1>
-        <div className="flex items-center gap-10">
+        <div className="flex items-center gap-6">
   <a href="#skills" className="hover:text-cyan-400">Skills</a>
   <a href="#projects" className="hover:text-cyan-400">Projects</a>
   <a href="#github" className="hover:text-cyan-400">GitHub</a>
   <a href="#resume" className="hover:text-cyan-400">Resume</a>
   <a href="#contact" className="hover:text-cyan-400">Contact</a>
+  <RecruiterToggle />
 </div>
         
 

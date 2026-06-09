@@ -1,45 +1,58 @@
+import TimelinePlanet from "../components/TimelinePlanet";
+import { timeline } from "../data/timeline";
+
 export default function Timeline() {
   return (
     <section
+      id="timeline"
       className="
-      w-full min-h-screen
+      min-h-screen
+      py-32
+      px-8
+      bg-gradient-to-b
+      from-black
+      via-blue-950/10
+      to-black
       "
     >
       <h2
         className="
-        text-5xl
         text-center
-        font-bold
-        mb-16
+        text-6xl
+        font-black
+        mb-24
         "
       >
-        Journey
+        Journey Through Space
       </h2>
-
-      <div className="space-y-12">
-
-        <div>
-          <h3>2025</h3>
-          <p>
-            Started AI Development
-          </p>
-        </div>
-
-        <div>
-          <h3>2026</h3>
-          <p>
-            Built SETU, Sentilytics,
-            and Drishti
-          </p>
-        </div>
-
-        <div>
-          <h3>2027</h3>
-          <p>
-            Google Summer of Code Goal
-          </p>
-        </div>
-
+      <div
+  className="
+  h-1
+  bg-gradient-to-r
+  from-cyan-500
+  via-blue-500
+  to-purple-500
+  max-w-5xl
+  mx-auto
+  mb-24
+  rounded-full
+  "
+/>
+      <div
+        className="
+        max-w-7xl
+        mx-auto
+        grid
+        md:grid-cols-4
+        gap-12
+        "
+      >
+        {timeline.map((item) => (
+          <TimelinePlanet
+            key={item.year}
+            {...item}
+          />
+        ))}
       </div>
     </section>
   );
