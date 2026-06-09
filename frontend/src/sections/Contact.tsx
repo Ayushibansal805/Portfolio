@@ -39,11 +39,13 @@ export default function Contact() {
 
       <div
         className="
-        mt-10
-        flex
-        flex-col
-        gap-4
-        "
+mt-10
+flex
+flex-row
+gap-6
+flex-wrap
+justify-center
+"
       >
         <a
           href="mailto:ayushi.bansal_cs.h24@gla.ac.in"

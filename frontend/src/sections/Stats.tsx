@@ -38,8 +38,18 @@ export default function Stats() {
           <div
             key={stat.label}
             className="
-            text-center
-            "
+bg-black/40
+backdrop-blur-xl
+border
+border-cyan-500/30
+rounded-3xl
+p-10
+text-center
+hover:scale-105
+hover:border-cyan-400
+transition-all
+duration-300
+"
           >
             <h2
               className="

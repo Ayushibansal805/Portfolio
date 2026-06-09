@@ -2,31 +2,23 @@ export default function Footer() {
   return (
     <footer
       className="
-      py-16
+      py-20
       text-center
       border-t
       border-cyan-500/20
       "
     >
-      <h2
-        className="
-        text-3xl
-        font-bold
-        "
-      >
+      <h3 className="text-3xl font-bold">
         Ayushi Bansal
-      </h2>
+      </h3>
 
-      <p className="text-gray-500 mt-4">
+      <p className="text-gray-400 mt-3">
         AI Developer • Open Source Contributor
       </p>
 
-      <p className="mt-6 text-gray-600">
-        Built with React,
-        Three.js,
-        Framer Motion,
-        FastAPI,
-        and AI.
+      <p className="text-gray-500 mt-8">
+        Built with React, Three.js,
+        Framer Motion and FastAPI.
       </p>
     </footer>
   );

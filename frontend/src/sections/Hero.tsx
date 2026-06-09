@@ -23,11 +23,16 @@ export default function Hero() {
   lg:grid-cols-2
   gap-16
   items-center
-  px-12
+  px-8
   lg:px-24
+  bg-gradient-to-b
+  from-black
+  via-slate-950
+  to-black
   "
 >
       <motion.div
+      className="max-w-2xl"
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
         transition={{ duration: 1 }}
@@ -38,16 +43,18 @@ export default function Hero() {
 
         <h1
           className="
-          hero-title
-          text-7xl md:text-[8rem]
-          font-black
-          bg-gradient-to-r
-          from-cyan-300
-          via-blue-400
-          to-purple-500
-          bg-clip-text
-          text-transparent
-          "
+hero-title
+text-8xl
+lg:text-[9rem]
+font-black
+leading-none
+bg-gradient-to-r
+from-cyan-300
+via-blue-400
+to-purple-500
+bg-clip-text
+text-transparent
+"
         >
           Ayushi
         </h1>
@@ -148,7 +155,15 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <div className="w-full h-[800px]">
+      <div
+  className="
+  w-full
+  h-[850px]
+  flex
+  items-center
+  justify-center
+  "
+>
   <Hero3D />
 </div>
     </section>

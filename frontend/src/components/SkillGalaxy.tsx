@@ -32,11 +32,11 @@ function OrbitingSkills() {
           <Text
             key={skill}
             position={[
-              Math.cos(angle) * 10,
-              Math.sin(angle) * 8,
-              Math.sin(angle) * 8,
+              Math.cos(angle) * 14,
+              Math.sin(angle) * 12,
+              Math.sin(angle) * 12,
             ]}
-            fontSize={1.2}
+            fontSize={2.4}
             color="#00ffff"
           >
             {skill}
@@ -49,7 +49,7 @@ function OrbitingSkills() {
 
 export default function SkillGalaxy() {
   return (
-    <Canvas camera={{ position: [0, 0, 8] }}>
+    <Canvas camera={{ position: [0, 0, 30] }}>
 
       <ambientLight intensity={2} />
 
@@ -57,7 +57,7 @@ export default function SkillGalaxy() {
 
       {/* AI Core */}
       <mesh>
-        <sphereGeometry args={[0.8, 64, 64]} />
+        <sphereGeometry args={[2, 64, 64]} />
         <meshStandardMaterial
           emissive="#00ffff"
           emissiveIntensity={3}
@@ -68,9 +68,10 @@ export default function SkillGalaxy() {
       <OrbitingSkills />
 
       <OrbitControls
-        enableZoom={false}
-      />
-
+  autoRotate
+  autoRotateSpeed={1}
+  enableZoom={false}
+/>
     </Canvas>
   );
 }

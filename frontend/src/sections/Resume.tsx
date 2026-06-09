@@ -50,7 +50,9 @@ export default function Resume() {
   </a>
 
 </div>
-        <Terminal />
+        <div className="max-w-4xl mx-auto">
+  <Terminal />
+</div>
 
       </div>
     </section>

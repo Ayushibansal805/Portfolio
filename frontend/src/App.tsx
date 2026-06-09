@@ -1,21 +1,19 @@
 import { useState } from "react";
 
 import Loader from "./components/Loader";
-
 import Navbar from "./components/Navbar";
 import Socials from "./components/Socials";
+import ScrollProgress from "./components/ScrollProgress";
+import StarsBackground from "./components/StarsBackground";
+import Footer from "./components/Footer";
+
 import Hero from "./sections/Hero";
 import Stats from "./sections/Stats";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Github from "./sections/Github";
 import Resume from "./sections/Resume";
-
-import StarsBackground from "./components/StarsBackground";
-import SectionDivider from "./components/SectionDivider";
 import Contact from "./sections/Contact";
-import ScrollProgress from "./components/ScrollProgress";
-
 
 function App() {
 
@@ -35,34 +33,35 @@ function App() {
   return (
     <>
       <StarsBackground />
+
       <ScrollProgress />
+
       <Navbar />
 
       <Socials />
 
-      <main className="w-full text-white overflow-x-hidden">
-
+      <main
+        className="
+        w-full
+        text-white
+        overflow-x-hidden
+        "
+      >
         <Hero />
 
         <Stats />
 
-        <SectionDivider />
-
         <Skills />
-
-        <SectionDivider />
 
         <Projects />
 
-        <SectionDivider />
-
         <Github />
 
-        <SectionDivider />
-
         <Resume />
+
         <Contact />
 
+        <Footer />
       </main>
     </>
   );

@@ -4,14 +4,21 @@ export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen py-20"
+      className="
+      min-h-screen
+      py-32
+      bg-gradient-to-b
+      from-black
+      via-purple-950/10
+      to-black
+      "
     >
-      <div className="mb-12">
+      <div className="mb-16">
 
         <h2
           className="
           text-center
-          text-5xl
+          text-6xl
           font-bold
           "
         >
@@ -22,15 +29,15 @@ export default function Projects() {
           className="
           text-center
           text-gray-400
-          mt-4
+          mt-6
           "
         >
-          Explore my AI-powered projects.
+          Explore my flagship AI projects.
         </p>
 
       </div>
 
-      <div className="h-[1000px]">
+      <div className="h-[700px]">
         <ProjectUniverse />
       </div>
 

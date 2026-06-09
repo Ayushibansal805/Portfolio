@@ -17,45 +17,26 @@ py-3
 "
 >
       <div
-        className="
-        max-w-7xl
-        mx-auto
-        flex
-        justify-between
-        items-center
-        px-8
-        py-4
-        "
-      >
+  className="
+  flex
+  items-center
+  gap-12
+  "
+>
         <h1 className="font-bold text-xl">
           AYUSHI
         </h1>
-
-        <div className="
-hover:text-cyan-400
-transition
-">
-
-  <a href="#skills">
-    Skills
-  </a>
-
-  <a href="#projects">
-    Projects
-  </a>
-
-  <a href="#github">
-    GitHub
-  </a>
-
-  <a href="#resume">
-    Resume
-  </a>
-  <a href="#contact">
-  Contact
-</a>
-
+        <div className="flex items-center gap-10">
+  <a href="#skills" className="hover:text-cyan-400">Skills</a>
+  <a href="#projects" className="hover:text-cyan-400">Projects</a>
+  <a href="#github" className="hover:text-cyan-400">GitHub</a>
+  <a href="#resume" className="hover:text-cyan-400">Resume</a>
+  <a href="#contact" className="hover:text-cyan-400">Contact</a>
 </div>
+        
+
+
+  
       </div>
     </nav>
   );

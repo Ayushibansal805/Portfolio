@@ -1,6 +1,18 @@
 import { useState } from "react";
 
 const commands: Record<string, string> = {
+  gsoc: `
+Google Summer of Code 2027
+
+Current Focus:
+• Open Source Contributions
+• Backend Development
+• Proposal Writing
+• AI Systems
+
+Target:
+Become a GSoC Contributor
+`,
   help: `
 Available Commands
 
