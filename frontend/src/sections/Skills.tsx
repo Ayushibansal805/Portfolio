@@ -17,7 +17,7 @@ export default function Skills() {
 
       </div>
 
-      <div className="h-[80vh]">
+      <div className="h-[900px]">
         <SkillGalaxy />
       </div>
 

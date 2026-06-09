@@ -21,7 +21,7 @@ export default function Contact() {
         font-bold
         "
       >
-        Let's Connect
+        Mission Contact
       </motion.h2>
 
       <p

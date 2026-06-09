@@ -38,7 +38,9 @@ export default function Hero3D() {
       <ambientLight intensity={2} />
       <pointLight position={[10, 10, 10]} />
         <Astronaut />
-      <RotatingKnot />
+      {/* <group position={[4, 0, 0]}>
+  <RotatingKnot />
+</group> */}
     </Canvas>
   );
 }

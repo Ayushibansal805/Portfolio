@@ -31,7 +31,7 @@ function Planet({
         onClick={() => onClick(project)}
         >
         <sphereGeometry
-          args={[1.8,64,64]}
+          args={[0.9,64,64]}
         />
 
         <meshStandardMaterial
@@ -65,7 +65,7 @@ export default function ProjectUniverse() {
     <>
       <Canvas
         camera={{
-          position: [0, 0, 18],
+          position: [0, 0, 25],
         }}
       >
         <ambientLight intensity={2} />

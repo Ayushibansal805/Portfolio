@@ -19,7 +19,7 @@ export default function Resume() {
           text-center
           "
         >
-          AI Resume Terminal
+          AI Command Terminal
         </h2>
 
         <p

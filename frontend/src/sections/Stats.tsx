@@ -25,14 +25,15 @@ export default function Stats() {
     <section className="py-24">
 
       <div
-        className="
-        max-w-6xl
-        mx-auto
-        grid
-        md:grid-cols-4
-        gap-8
-        "
-      >
+ className="
+ max-w-7xl
+ mx-auto
+ grid
+ md:grid-cols-4
+ gap-8
+ px-8
+ "
+>
         {stats.map((stat) => (
           <div
             key={stat.label}

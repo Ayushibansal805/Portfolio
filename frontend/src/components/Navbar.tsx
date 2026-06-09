@@ -31,7 +31,10 @@ py-3
           AYUSHI
         </h1>
 
-        <div className="flex gap-8">
+        <div className="
+hover:text-cyan-400
+transition
+">
 
   <a href="#skills">
     Skills

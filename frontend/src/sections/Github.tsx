@@ -7,10 +7,10 @@ export default function Github() {
       id="github"
       className="min-h-screen px-6 py-20 bg-black text-white"
     >
-      <div className="max-w-6xl mx-auto">
+      <div className="max-w-7xl mx-auto">
 
         <h2 className="text-5xl font-bold mb-8 text-center">
-          GitHub Activity
+          Open Source Station
         </h2>
 
         <p className="text-center text-gray-400 mb-12">

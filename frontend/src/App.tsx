@@ -40,7 +40,7 @@ function App() {
 
       <Socials />
 
-      <main className="text-white">
+      <main className="w-full text-white overflow-x-hidden">
 
         <Hero />
 

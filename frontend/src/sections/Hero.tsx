@@ -16,15 +16,17 @@ export default function Hero() {
   }, []);
 
   return (
-    <section
-      className="
-      min-h-screen
-      grid
-      md:grid-cols-2
-      items-center
-      px-10
-      "
-    >
+      <section
+  className="
+  min-h-screen
+  grid
+  lg:grid-cols-2
+  gap-16
+  items-center
+  px-12
+  lg:px-24
+  "
+>
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}
@@ -37,8 +39,7 @@ export default function Hero() {
         <h1
           className="
           hero-title
-          text-6xl
-          md:text-8xl
+          text-7xl md:text-[8rem]
           font-black
           bg-gradient-to-r
           from-cyan-300
@@ -51,7 +52,7 @@ export default function Hero() {
           Ayushi
         </h1>
 
-        <h2 className="text-5xl md:text-7xl font-black">
+        <h2 className="text-6xl md:text-[7rem] font-black">
           Bansal
         </h2>
 
@@ -147,9 +148,9 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <div className="h-[600px]">
-        <Hero3D />
-      </div>
+      <div className="w-full h-[800px]">
+  <Hero3D />
+</div>
     </section>
   );
 }

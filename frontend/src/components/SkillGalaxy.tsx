@@ -32,11 +32,11 @@ function OrbitingSkills() {
           <Text
             key={skill}
             position={[
-              Math.cos(angle) * 6,
-              Math.sin(angle) * 4,
-              Math.sin(angle) * 4,
+              Math.cos(angle) * 10,
+              Math.sin(angle) * 8,
+              Math.sin(angle) * 8,
             ]}
-            fontSize={0.8}
+            fontSize={1.2}
             color="#00ffff"
           >
             {skill}

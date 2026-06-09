@@ -1,14 +1,12 @@
 import ProjectUniverse from "../components/ProjectUniverse";
-import { projects } from "../data/projects";
-import ProjectCard from "../components/ProjectCard";
 
 export default function Projects() {
   return (
     <section
       id="projects"
-      className="min-h-screen"
+      className="min-h-screen py-20"
     >
-      <div className="pt-20">
+      <div className="mb-12">
 
         <h2
           className="
@@ -17,7 +15,7 @@ export default function Projects() {
           font-bold
           "
         >
-          Projects Universe
+          Project Universe
         </h2>
 
         <p
@@ -27,32 +25,13 @@ export default function Projects() {
           mt-4
           "
         >
-          AI solutions with real-world impact.
+          Explore my AI-powered projects.
         </p>
 
       </div>
 
-      <div className="h-[600px]">
+      <div className="h-[1000px]">
         <ProjectUniverse />
-      </div>
-
-      <div
-        className="
-        max-w-7xl
-        mx-auto
-        px-8
-        pb-20
-        grid
-        md:grid-cols-3
-        gap-8
-        "
-      >
-        {projects.map((project) => (
-          <ProjectCard
-            key={project.title}
-            project={project}
-          />
-        ))}
       </div>
 
     </section>
