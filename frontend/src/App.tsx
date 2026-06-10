@@ -1,10 +1,10 @@
-import { useState } from "react";
 
-import Loader from "./components/Loader";
 import Navbar from "./components/Navbar";
 import ScrollProgress from "./components/ScrollProgress";
 import StarsBackground from "./components/StarsBackground";
 import Footer from "./components/Footer";
+import SpaceNavigator
+from "./components/SpaceNavigator";
 import AIAssistant from "./sections/AIAssistant";
 import Hero from "./sections/Hero";
 import Stats from "./sections/Stats";
@@ -15,22 +15,11 @@ import Resume from "./sections/Resume";
 import Contact from "./sections/Contact";
 import Timeline from "./sections/Timeline";
 import {usePortfolio,} from "./context/PortfolioContext";
+import Achievements from "./sections/Achievements";
 function App() {
   const {
   recruiterMode,
 } = usePortfolio();
-  const [loading, setLoading] =
-    useState(true);
-
-  if (loading) {
-    return (
-      <Loader
-        onFinish={() =>
-          setLoading(false)
-        }
-      />
-    );
-  }
 
   return (
     <>
@@ -41,6 +30,7 @@ function App() {
       <ScrollProgress />
 
       <Navbar />
+      <SpaceNavigator />
 
 
       <main
@@ -58,6 +48,7 @@ function App() {
 
         <Projects />
         <Timeline />
+        <Achievements />
         <AIAssistant />
 
         <Github />

@@ -1,3 +1,5 @@
+import { motion } from "framer-motion";
+
 type Project = {
   title: string;
   description: string;
@@ -20,70 +22,163 @@ export default function ProjectModal({
       className="
       fixed
       inset-0
-      bg-black/80
+      bg-black/70
       backdrop-blur-md
-      flex
-      justify-center
-      items-center
       z-[9999]
       "
+      onClick={onClose}
     >
-      <div
+      <motion.div
+        initial={{ x: 600 }}
+        animate={{ x: 0 }}
+        exit={{ x: 600 }}
+        transition={{
+          duration: 0.5,
+          ease: "easeOut",
+        }}
+        onClick={(e) =>
+          e.stopPropagation()
+        }
         className="
-        max-w-2xl
-        w-[90%]
-        bg-zinc-900
-        border
+        absolute
+        right-0
+        top-0
+        h-screen
+        w-full
+        md:w-[550px]
+        bg-zinc-950
+        border-l
         border-cyan-500/30
-        rounded-3xl
         p-8
+        overflow-y-auto
+        shadow-[0_0_50px_rgba(6,182,212,0.25)]
         "
       >
-        <h2
-          className="
-          text-5xl
-          font-bold
-          text-cyan-400
-          "
-        >
-          {project.title}
-        </h2>
+        {/* Header */}
 
-        <p className="mt-6 text-gray-300">
-          {project.description}
-        </p>
+        <div className="flex justify-between items-start">
 
-        <div className="flex flex-wrap gap-3 mt-6">
-          {project.tech.map((item) => (
-            <span
-              key={item}
+          <div>
+            <p className="text-cyan-400 text-sm tracking-widest">
+              MISSION FILE
+            </p>
+
+            <h2
               className="
-              px-4
-              py-2
-              rounded-full
-              bg-cyan-500/10
-              border
-              border-cyan-500/20
+              text-5xl
+              font-black
+              text-white
+              mt-2
               "
             >
-              {item}
-            </span>
-          ))}
+              {project.title}
+            </h2>
+          </div>
+
+          <button
+            onClick={onClose}
+            className="
+            text-gray-400
+            hover:text-red-400
+            text-3xl
+            transition
+            "
+          >
+            ✕
+          </button>
         </div>
 
-        <div className="flex gap-4 mt-8">
+        {/* Divider */}
 
+        <div
+          className="
+          h-[1px]
+          bg-cyan-500/20
+          my-8
+          "
+        />
+
+        {/* Description */}
+
+        <div>
+          <h3
+            className="
+            text-cyan-400
+            font-bold
+            mb-4
+            "
+          >
+            PROJECT OVERVIEW
+          </h3>
+
+          <p
+            className="
+            text-gray-300
+            leading-relaxed
+            "
+          >
+            {project.description}
+          </p>
+        </div>
+
+        {/* Tech Stack */}
+
+        <div className="mt-10">
+
+          <h3
+            className="
+            text-cyan-400
+            font-bold
+            mb-4
+            "
+          >
+            TECH STACK
+          </h3>
+
+          <div className="flex flex-wrap gap-3">
+            {project.tech.map((item) => (
+              <span
+                key={item}
+                className="
+                px-4
+                py-2
+                rounded-full
+                bg-cyan-500/10
+                border
+                border-cyan-500/20
+                text-cyan-300
+                "
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+        </div>
+
+        {/* Buttons */}
+
+        <div
+          className="
+          flex
+          gap-4
+          mt-12
+          flex-wrap
+          "
+        >
           <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
             className="
-            px-5
+            px-6
             py-3
+            rounded-xl
             bg-cyan-500
             text-black
-            rounded-xl
             font-bold
+            hover:scale-105
+            transition
             "
           >
             GitHub
@@ -94,29 +189,33 @@ export default function ProjectModal({
             target="_blank"
             rel="noopener noreferrer"
             className="
-            px-5
+            px-6
             py-3
+            rounded-xl
             border
             border-cyan-500
-            rounded-xl
+            hover:bg-cyan-500/10
+            transition
             "
           >
             Live Demo
           </a>
-
         </div>
 
-        <button
-          onClick={onClose}
+        {/* Footer */}
+
+        <div
           className="
-          mt-8
-          text-red-400
+          mt-16
+          text-xs
+          tracking-[0.3em]
+          text-gray-600
+          uppercase
           "
         >
-          Close
-        </button>
-
-      </div>
+          AYUSHI BANSAL • PROJECT UNIVERSE
+        </div>
+      </motion.div>
     </div>
   );
 }
