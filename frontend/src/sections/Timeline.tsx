@@ -1,20 +1,26 @@
 import TimelinePlanet from "../components/TimelinePlanet";
 import { timeline } from "../data/timeline";
-
+import { motion } from "framer-motion";
 export default function Timeline() {
   return (
-    <section
-      id="timeline"
-      className="
-      min-h-screen
-      py-32
-      px-8
-      bg-gradient-to-b
-      from-black
-      via-blue-950/10
-      to-black
-      "
-    >
+
+    <motion.section
+    id="timeline"
+  initial={{
+    opacity: 0,
+    y: 100,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+>
       <h2
         className="
         text-center
@@ -54,6 +60,6 @@ export default function Timeline() {
           />
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

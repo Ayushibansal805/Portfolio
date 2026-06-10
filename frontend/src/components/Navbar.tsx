@@ -30,11 +30,56 @@ py-3
           AYUSHI
         </h1>
         <div className="flex items-center gap-6">
-  <a href="#skills" className="hover:text-cyan-400">Skills</a>
-  <a href="#projects" className="hover:text-cyan-400">Projects</a>
-  <a href="#github" className="hover:text-cyan-400">GitHub</a>
-  <a href="#resume" className="hover:text-cyan-400">Resume</a>
-  <a href="#contact" className="hover:text-cyan-400">Contact</a>
+  <a
+  href="#skills"
+  className="
+  text-white
+  hover:text-cyan-400
+  transition
+  "
+>
+  Skills
+</a>
+  <a
+  href="#projects"
+  className="
+  text-white
+  hover:text-cyan-400
+  transition
+  "
+>
+  Projects
+</a>
+  <a
+  href="#github"
+  className="
+  text-white
+  hover:text-cyan-400
+  transition
+  "
+>
+  Github
+</a>
+  <a
+  href="#resume"
+  className="
+  text-white
+  hover:text-cyan-400
+  transition
+  "
+>
+  Resume
+</a>
+<a
+  href="#contact"
+  className="
+  text-white
+  hover:text-cyan-400
+  transition
+  "
+>
+  Contact
+</a>
   <RecruiterToggle />
 </div>
         

@@ -2,6 +2,7 @@ export default function Footer() {
   return (
     <footer
       className="
+      mt-32
       py-20
       text-center
       border-t

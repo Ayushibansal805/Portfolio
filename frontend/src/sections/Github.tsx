@@ -1,19 +1,24 @@
 import { GitHubCalendar } from "react-github-calendar";
-
+import { motion } from "framer-motion";
 export default function Github() {
   return (
-    <section
-      id="github"
-      className="
-      min-h-screen
-      py-32
-      px-8
-      bg-gradient-to-b
-      from-black
-      via-green-950/10
-      to-black
-      "
-    >
+    <motion.section
+    id="github"
+  initial={{
+    opacity: 0,
+    y: 100,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+>
       <div className="max-w-7xl mx-auto">
 
         <h2
@@ -78,6 +83,6 @@ export default function Github() {
         </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }

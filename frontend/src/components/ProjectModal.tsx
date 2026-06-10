@@ -46,12 +46,12 @@ export default function ProjectModal({
         h-screen
         w-full
         md:w-[550px]
-        bg-zinc-950
+        bg-black/90
         border-l
-        border-cyan-500/30
+        border-cyan-400/20
         p-8
         overflow-y-auto
-        shadow-[0_0_50px_rgba(6,182,212,0.25)]
+        shadow-[0_0_80px_rgba(0,255,255,0.15)]
         "
       >
         {/* Header */}

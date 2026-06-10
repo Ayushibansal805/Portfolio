@@ -1,18 +1,18 @@
 import { motion } from "framer-motion";
-
 export default function Contact() {
   return (
     <section
-      id="contact"
-      className="
-      min-h-screen
-      flex
-      flex-col
-      justify-center
-      items-center
-      px-8
-      "
-    >
+  id="contact"
+  className="
+  min-h-screen
+  flex
+  flex-col
+  items-center
+  justify-center
+  text-center
+  px-6
+  "
+>
       <motion.h2
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

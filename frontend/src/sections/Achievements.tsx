@@ -1,98 +1,114 @@
 import { achievements } from "../data/achievements";
-import AchievementCard from "../components/AchievementCard";
 import { motion } from "framer-motion";
 
 export default function Achievements() {
   return (
-    <section
-      id="achievements"
-      className="relative"
-    >
-      {/* Vertical Timeline */}
-
-      <div
-        className="
-        fixed
-        left-1/2
-        top-0
-        h-full
-        w-[2px]
-        bg-cyan-500/10
-        -translate-x-1/2
-        pointer-events-none
-        "
-      />
-
-      {/* Heading */}
-
-      <div
-        className="
-        text-center
-        py-24
-        px-8
-        "
-      >
-        <h2
-          className="
-          text-6xl
-          font-black
-          mb-6
-          "
-        >
-          Mission Achievements
-        </h2>
-
-        <p
-          className="
-          text-gray-400
-          max-w-2xl
-          mx-auto
-          "
-        >
-          Professional journey through
-          Cyber Security, AI, Machine Learning,
-          Open Source and Innovation.
-        </p>
-      </div>
-
-      {/* Scroll Story */}
+    <section id="achievements">
 
       {achievements.map(
         (achievement, index) => (
-          <motion.div
+
+          <section
             key={achievement.title}
-            initial={{
-              opacity: 0,
-              x:
-                index % 2 === 0
-                  ? -200
-                  : 200,
-            }}
-            whileInView={{
-              opacity: 1,
-              x: 0,
-            }}
-            viewport={{
-              once: false,
-              amount: 0.5,
-            }}
-            transition={{
-              duration: 1,
-            }}
             className="
             min-h-screen
             flex
             items-center
             justify-center
             px-8
+            relative
             "
           >
-            <AchievementCard
-              achievement={achievement}
-            />
-          </motion.div>
+            <motion.div
+              initial={{
+                opacity: 0,
+                y: 150,
+              }}
+              whileInView={{
+                opacity: 1,
+                y: 0,
+              }}
+              viewport={{
+                amount: 0.5,
+              }}
+              transition={{
+                duration: 1,
+              }}
+              className="
+              max-w-5xl
+              text-center
+              "
+            >
+
+              {/* Achievement Number */}
+
+              <h1
+                className="
+                text-[10rem]
+                md:text-[14rem]
+                font-black
+                text-cyan-500/10
+                absolute
+                left-1/2
+                top-1/2
+                -translate-x-1/2
+                -translate-y-1/2
+                pointer-events-none
+                "
+              >
+                0{index + 1}
+              </h1>
+
+              {/* Icon */}
+
+              <div
+                className="
+                text-8xl
+                mb-10
+                relative
+                z-10
+                "
+              >
+                {achievement.icon}
+              </div>
+
+              {/* Title */}
+
+              <h2
+                className="
+                text-5xl
+                md:text-7xl
+                font-black
+                mb-8
+                relative
+                z-10
+                "
+              >
+                {achievement.title}
+              </h2>
+
+              {/* Description */}
+
+              <p
+                className="
+                text-xl
+                md:text-2xl
+                text-gray-300
+                max-w-3xl
+                mx-auto
+                leading-relaxed
+                relative
+                z-10
+                "
+              >
+                {achievement.description}
+              </p>
+
+            </motion.div>
+          </section>
         )
       )}
+
     </section>
   );
 }

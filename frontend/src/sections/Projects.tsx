@@ -2,22 +2,29 @@ import ProjectUniverse from "../components/ProjectUniverse";
 import ProjectCard from "../components/ProjectCard";
 import { projects } from "../data/projects";
 import { usePortfolio } from "../context/PortfolioContext";
+import { motion } from "framer-motion";
 export default function Projects() {
   const {
   recruiterMode,
 } = usePortfolio();
   return (
-    <section
-      id="projects"
-      className="
-      min-h-screen
-      py-32
-      bg-gradient-to-b
-      from-black
-      via-purple-950/10
-      to-black
-      "
-    >
+    <motion.section
+    id="projects"
+  initial={{
+    opacity: 0,
+    y: 100,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+>
       <div className="mb-16">
 
         <h2
@@ -68,6 +75,6 @@ export default function Projects() {
   </div>
 )}
 
-    </section>
+    </motion.section>
   );
 }

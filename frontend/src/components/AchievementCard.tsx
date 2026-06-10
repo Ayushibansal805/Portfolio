@@ -26,6 +26,10 @@ export default function AchievementCard({
       hover:shadow-[0_0_80px_#06b6d4]
       transition-all
       duration-500
+      hover:-translate-y-2
+hover:shadow-[0_0_40px_rgba(0,255,255,0.2)]
+transition-all
+duration-500
       "
     >
       <div

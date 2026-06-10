@@ -2,48 +2,42 @@ export const achievements = [
   {
     icon: "🛡️",
     title: "Cyber Security Intern",
-
     description:
-      "Working as a Cyber Security Intern at HackHalt Organization, gaining practical experience in security practices, vulnerability assessment and real-world cybersecurity workflows.",
+      "Working at HackHalt Organization and gaining practical cybersecurity experience."
   },
 
   {
     icon: "🤖",
     title: "AI/ML Specialization",
-
     description:
-      "Strong knowledge of Artificial Intelligence, Machine Learning, Natural Language Processing and Computer Vision with hands-on project development experience.",
+      "Strong knowledge of AI, ML, NLP and Computer Vision with real-world applications."
   },
 
   {
     icon: "🏆",
     title: "1st Runner-Up — DataDash",
-
     description:
-      "Secured 1st Runner-Up position in DataDash Data Visualization Competition and received a cash prize of ₹5000.",
+      "Won ₹5000 cash prize in Data Visualization Competition."
   },
 
   {
     icon: "🚀",
     title: "Hackathon Participant",
-
     description:
-      "Actively participated in hackathons, collaborative coding events and innovation challenges focused on solving real-world problems.",
+      "Actively participated in hackathons and innovation challenges."
   },
 
   {
     icon: "🌍",
     title: "Open Source Journey",
-
     description:
-      "Contributing to open-source projects while preparing for Google Summer of Code 2027 and expanding development expertise.",
+      "Contributing to open-source projects while preparing for GSoC 2027."
   },
 
   {
     icon: "💻",
     title: "Full Stack & AI Products",
-
     description:
-      "Building real-world AI-powered products using React, FastAPI, MongoDB, NLP and Machine Learning technologies.",
+      "Building SETU, Sentilytics, Drishti and other real-world AI solutions."
   },
 ];

@@ -60,8 +60,8 @@ export default function Hero() {
     duration: 1,
   }}
   className="
-  text-7xl
-  md:text-8xl
+  text-5xl
+  md:text-7xl
   lg:text-[9rem]
   font-black
   bg-gradient-to-r
@@ -109,6 +109,17 @@ export default function Hero() {
             ]}
             repeat={Infinity}
           />
+          <p
+  className="
+  mt-4
+  text-cyan-300
+  tracking-widest
+  uppercase
+  text-sm
+  "
+>
+  AI Engineer • Open Source Contributor • GSoC 2027 Aspirant
+</p>
         </div>
 
         <p

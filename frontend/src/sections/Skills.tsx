@@ -4,19 +4,22 @@ import SkillGalaxy from "../components/SkillGalaxy";
 export default function Skills() {
   return (
     <motion.section
-      id="skills"
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 1 }}
-      className="
-      min-h-screen
-      py-24
-      bg-gradient-to-b
-      from-black
-      via-cyan-950/10
-      to-black
-      "
-    >
+    id="skills"
+  initial={{
+    opacity: 0,
+    y: 100,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+>
       <h2
         className="
         text-center

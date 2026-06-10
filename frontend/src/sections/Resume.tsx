@@ -1,15 +1,24 @@
 import Terminal from "../components/Terminal";
-
+import { motion } from "framer-motion";
 export default function Resume() {
   return (
-    <section
-      id="resume"
-      className="
-      min-h-screen
-      px-8
-      py-20
-      "
-    >
+    <motion.section
+    id="resume"
+  initial={{
+    opacity: 0,
+    y: 100,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  viewport={{
+    once: true,
+  }}
+  transition={{
+    duration: 0.8,
+  }}
+>
       <div className="w-full min-h-screen">
 
         <h2
@@ -55,6 +64,6 @@ export default function Resume() {
 </div>
 
       </div>
-    </section>
+    </motion.section>
   );
 }
