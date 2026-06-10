@@ -17,7 +17,7 @@ export default function AIChat() {
     setChat((prev) => [...prev, userMessage]);
 
     const res = await fetch(
-      "http://localhost:8000/chat",
+      "https://portfolio-wmdh.onrender.com/chat",
       {
         method: "POST",
         headers: {
